@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --color-forest: #102416;
+  --color-moss: #34472A;
+  --color-olive: #77713B;
+  --color-cream: #E9E6D5;
+  --color-wine: #741923;
+  --color-sage: #C4C3A8;
+
+  --bg-page: #E9E6D5;
+  --bg-subtle: #DFDCC8;
+  --bg-card: rgba(196, 195, 168, 0.28);
+  --text-main: #102416;
+  --text-body: #34472A;
+  --text-muted: #5C572C;
+  --border-line: #C4C3A8;
+  --nav-glass: rgba(233, 230, 213, 0.72);
+  --nav-border: rgba(196, 195, 168, 0.85);
+
+  accent-color: #102416;
+  --font-serif: "Libre Caslon Text", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-page: #102416;
+  --bg-subtle: #162E1D;
+  --bg-card: rgba(52, 71, 42, 0.48);
+  --text-main: #E9E6D5;
+  --text-body: #C4C3A8;
+  --text-muted: #A9A46A;
+  --border-line: rgba(196, 195, 168, 0.24);
+  --nav-glass: rgba(16, 36, 22, 0.75);
+  --nav-border: rgba(196, 195, 168, 0.28);
+  accent-color: #E9E6D5;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  scrollbar-color: var(--color-moss) var(--bg-page);
+  transition:
+    background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.nav-glass-pill {
+  background-color: var(--nav-glass);
+  border: 1px solid var(--nav-border);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  box-shadow: 0 10px 32px -8px rgba(16, 36, 22, 0.14);
+}
